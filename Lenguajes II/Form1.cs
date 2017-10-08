@@ -183,20 +183,20 @@ namespace Lenguajes_II
         {
             if (dogo.Bounds.IntersectsWith(balon.Bounds) || dogo.Bounds.IntersectsWith(pelota.Bounds))
             {
-
+                move.Stop();
                 do
                 {
-                    move.Stop();
                     game_time = game_time - 1;
+
                 } while (game_time == 0);
+
 
                 if (game_time == -1)
                 {
-                    move.Stop();
                     move.Start();
+                    move.Interval = 1000;
                     label2.Visible = false;
-                    game_time = 30;
-                    
+                    game_time = 30;   
                 }
                 else
                 {

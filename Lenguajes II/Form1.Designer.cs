@@ -33,6 +33,7 @@
             this.move = new System.Windows.Forms.Timer(this.components);
             this.comida_time = new System.Windows.Forms.Timer(this.components);
             this.box = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.balon = new System.Windows.Forms.PictureBox();
             this.pelota = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@
             this.pared5 = new System.Windows.Forms.PictureBox();
             this.ghosts = new System.Windows.Forms.Timer(this.components);
             this.juego = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.balon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pelota)).BeginInit();
@@ -111,6 +111,15 @@
             this.box.TabStop = false;
             this.box.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 508);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -146,7 +155,7 @@
             this.ghost_1.BackColor = System.Drawing.Color.Transparent;
             this.ghost_1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ghost_1.BackgroundImage")));
             this.ghost_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ghost_1.Location = new System.Drawing.Point(359, 461);
+            this.ghost_1.Location = new System.Drawing.Point(339, 461);
             this.ghost_1.Name = "ghost_1";
             this.ghost_1.Size = new System.Drawing.Size(62, 73);
             this.ghost_1.TabIndex = 30;
@@ -195,7 +204,8 @@
             this.ghost_2.BackColor = System.Drawing.Color.Transparent;
             this.ghost_2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ghost_2.BackgroundImage")));
             this.ghost_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ghost_2.Location = new System.Drawing.Point(601, 0);
+            this.ghost_2.Image = ((System.Drawing.Image)(resources.GetObject("ghost_2.Image")));
+            this.ghost_2.Location = new System.Drawing.Point(585, 3);
             this.ghost_2.Name = "ghost_2";
             this.ghost_2.Size = new System.Drawing.Size(55, 57);
             this.ghost_2.TabIndex = 26;
@@ -207,9 +217,10 @@
             this.dogo.BackColor = System.Drawing.Color.Transparent;
             this.dogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dogo.BackgroundImage")));
             this.dogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dogo.Location = new System.Drawing.Point(48, 23);
+            this.dogo.Image = ((System.Drawing.Image)(resources.GetObject("dogo.Image")));
+            this.dogo.Location = new System.Drawing.Point(52, 30);
             this.dogo.Name = "dogo";
-            this.dogo.Size = new System.Drawing.Size(66, 66);
+            this.dogo.Size = new System.Drawing.Size(62, 59);
             this.dogo.TabIndex = 25;
             this.dogo.TabStop = false;
             // 
@@ -301,15 +312,6 @@
             this.juego.Enabled = true;
             this.juego.Interval = 1000;
             this.juego.Tick += new System.EventHandler(this.juego_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 508);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
