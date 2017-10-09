@@ -33,6 +33,7 @@
             this.move = new System.Windows.Forms.Timer(this.components);
             this.comida_time = new System.Windows.Forms.Timer(this.components);
             this.box = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.balon = new System.Windows.Forms.PictureBox();
@@ -52,6 +53,7 @@
             this.pared5 = new System.Windows.Forms.PictureBox();
             this.ghosts = new System.Windows.Forms.Timer(this.components);
             this.juego = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.balon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pelota)).BeginInit();
@@ -87,6 +89,8 @@
             this.box.BackColor = System.Drawing.Color.Transparent;
             this.box.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("box.BackgroundImage")));
             this.box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.box.Controls.Add(this.label5);
+            this.box.Controls.Add(this.label3);
             this.box.Controls.Add(this.label2);
             this.box.Controls.Add(this.label1);
             this.box.Controls.Add(this.balon);
@@ -110,6 +114,14 @@
             this.box.TabIndex = 0;
             this.box.TabStop = false;
             this.box.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 35;
             // 
             // label2
             // 
@@ -251,6 +263,8 @@
             this.pared9.BackColor = System.Drawing.Color.Transparent;
             this.pared9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pared9.BackgroundImage")));
             this.pared9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pared9.Enabled = false;
+            this.pared9.Image = ((System.Drawing.Image)(resources.GetObject("pared9.Image")));
             this.pared9.Location = new System.Drawing.Point(601, 3);
             this.pared9.Name = "pared9";
             this.pared9.Size = new System.Drawing.Size(21, 251);
@@ -295,7 +309,7 @@
             this.pared5.BackColor = System.Drawing.Color.Transparent;
             this.pared5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pared5.BackgroundImage")));
             this.pared5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pared5.Location = new System.Drawing.Point(0, 236);
+            this.pared5.Location = new System.Drawing.Point(0, 233);
             this.pared5.Name = "pared5";
             this.pared5.Size = new System.Drawing.Size(126, 21);
             this.pared5.TabIndex = 18;
@@ -312,6 +326,15 @@
             this.juego.Enabled = true;
             this.juego.Interval = 1000;
             this.juego.Tick += new System.EventHandler(this.juego_Tick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(445, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 37;
+            this.label5.Visible = false;
             // 
             // Form1
             // 
@@ -368,6 +391,8 @@
         private System.Windows.Forms.Timer ghosts;
         private System.Windows.Forms.Timer juego;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }
 

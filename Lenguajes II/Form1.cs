@@ -35,32 +35,47 @@ namespace Lenguajes_II
         private void Move_dogo()
         {
             Random rand = new Random();
-            dogo.Location = new Point(rand.Next(956), rand.Next(490));
+            int x, y;
+
+            x = rand.Next(956);
+            y = rand.Next(490);
+
+            dogo.Location = new Point(x, y);
+
+            if()
+            {
+
+            }
+
             
-            //Colision con paredes y ghosts
+        }
+        
+        private int movimiento()
+        {
+            //Point(x,y)
             if (dogo.Bounds.IntersectsWith(pared6.Bounds))
             {
-                dogo.Location = new Point(rand.Next(100), rand.Next(50));
+                dogo.Location = new Point(199, 19);
             }
             if (dogo.Bounds.IntersectsWith(pared7.Bounds))
             {
-                dogo.Location = new Point(rand.Next(100), rand.Next(50));
+                dogo.Location = new Point();
             }
             if (dogo.Bounds.IntersectsWith(pared8.Bounds))
             {
-                dogo.Location = new Point(rand.Next(100), rand.Next(50));
+                dogo.Location = new Point();
             }
             if (dogo.Bounds.IntersectsWith(pared9.Bounds))
             {
-                dogo.Location = new Point(rand.Next(100), rand.Next(50));
+                dogo.Location = new Point();
             }
             if (dogo.Bounds.IntersectsWith(pared10.Bounds))
             {
-                dogo.Location = new Point(rand.Next(100), rand.Next(50));
+                dogo.Location = new Point();
             }
             if (dogo.Bounds.IntersectsWith(pared11.Bounds))
             {
-                dogo.Location = new Point(rand.Next(100), rand.Next(50));
+                dogo.Location = new Point();
             }
             if (dogo.Bounds.IntersectsWith(ghost_1.Bounds))
             {
@@ -74,8 +89,6 @@ namespace Lenguajes_II
                 MessageBox.Show("te has encontrado con un terrible destino");
                 this.Close();
             }
-
-
         }
         //Aparecer, y mover ghosts cada 10 segundos
         private void move_ghosts()
@@ -211,7 +224,21 @@ namespace Lenguajes_II
         {
             game();
         }
+        private void dormir()
+        {
+            int sl = 90;
+            sl -= 1;
+            
+            if(sl == 0)
+            {
+                move.Stop();
+                label5.Visible = true;
+                label5.Text = "Durmiendo: " + sl;
+            }
+            move.Interval = (1000);
+            move.Start();
 
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
