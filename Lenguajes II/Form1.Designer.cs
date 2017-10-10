@@ -33,6 +33,7 @@
             this.move = new System.Windows.Forms.Timer(this.components);
             this.comida_time = new System.Windows.Forms.Timer(this.components);
             this.box = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.pared5 = new System.Windows.Forms.PictureBox();
             this.ghosts = new System.Windows.Forms.Timer(this.components);
             this.juego = new System.Windows.Forms.Timer(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             this.box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.balon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pelota)).BeginInit();
@@ -114,6 +114,15 @@
             this.box.TabIndex = 0;
             this.box.TabStop = false;
             this.box.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(445, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 37;
+            this.label5.Visible = false;
             // 
             // label3
             // 
@@ -326,15 +335,6 @@
             this.juego.Enabled = true;
             this.juego.Interval = 1000;
             this.juego.Tick += new System.EventHandler(this.juego_Tick);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(445, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
-            this.label5.TabIndex = 37;
-            this.label5.Visible = false;
             // 
             // Form1
             // 

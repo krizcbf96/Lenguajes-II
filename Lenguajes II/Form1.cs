@@ -17,6 +17,9 @@ namespace Lenguajes_II
             InitializeComponent();
         }
 
+        int desp = 10;
+        int x = 1, y = 1;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -34,62 +37,76 @@ namespace Lenguajes_II
         //Movimiento Dogo 
         private void Move_dogo()
         {
-            Random rand = new Random();
-            int x, y;
+            Random randx = new Random();
+            Random randy = new Random();
 
-            x = rand.Next(956);
-            y = rand.Next(490);
-
-            dogo.Location = new Point(x, y);
-
-            if()
+            if(x == 1)
             {
-
+                dogo.Left += randx.Next(20);
             }
+            else
+            {
+                dogo.Left -= randx.Next(20);
+            }
+            if(y == 1)
+            {
+                dogo.Top += randy.Next(20); 
+            }
+            else
+            {
+                dogo.Top -= randy.Next(20);
+            }
+
+                    
+                       
+        }
+
+        private void colision()
+        {
+           
+                //Point(x,y)
+                if (dogo.Bounds.IntersectsWith(pared6.Bounds))
+                {
+                    dogo.Left -= 20;
+                }
+                if (dogo.Bounds.IntersectsWith(pared7.Bounds))
+                {
+                    dogo.Left -= 20;
+                    dogo.Top += 20;
+                }
+                if (dogo.Bounds.IntersectsWith(pared8.Bounds))
+                {
+                    dogo.Left -= 20;
+                }
+                if (dogo.Bounds.IntersectsWith(pared9.Bounds))
+                {
+                    dogo.Left -= 20;
+                }
+                if (dogo.Bounds.IntersectsWith(pared10.Bounds))
+                {
+                    dogo.Left -= 20;
+                }
+                if (dogo.Bounds.IntersectsWith(pared11.Bounds))
+                {
+                    dogo.Left -= 20;
+                }
+                if (dogo.Bounds.IntersectsWith(ghost_1.Bounds))
+                {
+                    move.Stop();
+                    MessageBox.Show("te has encontrado con un terrible destino");
+                    this.Close();
+                }
+                if (dogo.Bounds.IntersectsWith(ghost_2.Bounds))
+                {
+                    move.Stop();
+                    MessageBox.Show("te has encontrado con un terrible destino");
+                    this.Close();
+                }
+
 
             
         }
-        
-        private int movimiento()
-        {
-            //Point(x,y)
-            if (dogo.Bounds.IntersectsWith(pared6.Bounds))
-            {
-                dogo.Location = new Point(199, 19);
-            }
-            if (dogo.Bounds.IntersectsWith(pared7.Bounds))
-            {
-                dogo.Location = new Point();
-            }
-            if (dogo.Bounds.IntersectsWith(pared8.Bounds))
-            {
-                dogo.Location = new Point();
-            }
-            if (dogo.Bounds.IntersectsWith(pared9.Bounds))
-            {
-                dogo.Location = new Point();
-            }
-            if (dogo.Bounds.IntersectsWith(pared10.Bounds))
-            {
-                dogo.Location = new Point();
-            }
-            if (dogo.Bounds.IntersectsWith(pared11.Bounds))
-            {
-                dogo.Location = new Point();
-            }
-            if (dogo.Bounds.IntersectsWith(ghost_1.Bounds))
-            {
-                move.Stop();
-                MessageBox.Show("te has encontrado con un terrible destino");
-                this.Close();
-            }
-            if (dogo.Bounds.IntersectsWith(ghost_2.Bounds))
-            {
-                move.Stop();
-                MessageBox.Show("te has encontrado con un terrible destino");
-                this.Close();
-            }
-        }
+
         //Aparecer, y mover ghosts cada 10 segundos
         private void move_ghosts()
         {
@@ -119,6 +136,7 @@ namespace Lenguajes_II
         private void timer1_Tick(object sender, EventArgs e)
         {
             Move_dogo();
+            colision();
         }
 
         int time = 60;
