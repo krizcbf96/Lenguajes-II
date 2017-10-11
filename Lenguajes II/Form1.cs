@@ -16,10 +16,7 @@ namespace Lenguajes_II
         {
             InitializeComponent();
         }
-
-        int desp = 10;
-        int x = 1, y = 1;
-
+   
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -37,59 +34,46 @@ namespace Lenguajes_II
         //Movimiento Dogo 
         private void Move_dogo()
         {
-            Random randx = new Random();
-            Random randy = new Random();
-
-            if(x == 1)
-            {
-                dogo.Left += randx.Next(20);
-            }
-            else
-            {
-                dogo.Left -= randx.Next(20);
-            }
-            if(y == 1)
-            {
-                dogo.Top += randy.Next(20); 
-            }
-            else
-            {
-                dogo.Top -= randy.Next(20);
-            }
-
-                    
-                       
+            dogo.Location = new Point(dogo.Location.X + 1, dogo.Location.Y);
         }
 
         private void colision()
         {
-           
-                //Point(x,y)
-                if (dogo.Bounds.IntersectsWith(pared6.Bounds))
+            //Point(x,y)
+            if (dogo.Bounds.IntersectsWith(pared6.Bounds))
+            {
+                dogo.Left -= 9;
+                dogo.Top += 20;
+            }
+            if (dogo.Bounds.IntersectsWith(pared7.Bounds))
                 {
-                    dogo.Left -= 20;
-                }
-                if (dogo.Bounds.IntersectsWith(pared7.Bounds))
-                {
-                    dogo.Left -= 20;
-                    dogo.Top += 20;
+                    dogo.Left -= dogo.Width;
+                    dogo.Top += dogo.Width;
                 }
                 if (dogo.Bounds.IntersectsWith(pared8.Bounds))
                 {
-                    dogo.Left -= 20;
-                }
+                dogo.Left -= dogo.Width;
+                dogo.Top += dogo.Width;
+            }
                 if (dogo.Bounds.IntersectsWith(pared9.Bounds))
                 {
-                    dogo.Left -= 20;
-                }
+                dogo.Left -= dogo.Width;
+                dogo.Top += dogo.Width;
+            }
                 if (dogo.Bounds.IntersectsWith(pared10.Bounds))
                 {
-                    dogo.Left -= 20;
-                }
+                dogo.Left -= dogo.Width;
+                dogo.Top += dogo.Width;
+            }
                 if (dogo.Bounds.IntersectsWith(pared11.Bounds))
                 {
-                    dogo.Left -= 20;
+                dogo.Left -= dogo.Width;
+                dogo.Top += dogo.Width; dogo.Left -= 20;
                 }
+                if(dogo.Location.Y == 0 && dogo.Location.X == 0){
+                dogo.Left -= dogo.Width;
+                dogo.Top += dogo.Width; dogo.Left -= 20;
+            }
                 if (dogo.Bounds.IntersectsWith(ghost_1.Bounds))
                 {
                     move.Stop();
@@ -102,9 +86,6 @@ namespace Lenguajes_II
                     MessageBox.Show("te has encontrado con un terrible destino");
                     this.Close();
                 }
-
-
-            
         }
 
         //Aparecer, y mover ghosts cada 10 segundos
@@ -212,6 +193,7 @@ namespace Lenguajes_II
 
         private void game()
         {
+            Random juego = new Random();
             if (dogo.Bounds.IntersectsWith(balon.Bounds) || dogo.Bounds.IntersectsWith(pelota.Bounds))
             {
                 move.Stop();
@@ -225,9 +207,11 @@ namespace Lenguajes_II
                 if (game_time == -1)
                 {
                     move.Start();
-                    move.Interval = 1000;
+                    move.Interval = 2;
                     label2.Visible = false;
-                    game_time = 30;   
+                    game_time = 30;
+                    pelota.Location = new Point(juego.Next(942), juego.Next(488));
+                    balon.Location = new Point(juego.Next(942), juego.Next(488));
                 }
                 else
                 {
