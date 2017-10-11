@@ -42,33 +42,66 @@ namespace Lenguajes_II
             //Point(x,y)
             if (dogo.Bounds.IntersectsWith(pared6.Bounds))
             {
-                move_r.Enabled = false;
-                move_d.Enabled = true;
+                if(dogo.Location.X == 200)
+                {
+                    move_r.Enabled = false;
+                    move_d.Enabled = true;
+                }
+                else
+                {
+                    move_l.Enabled = false;
+                    move_d.Enabled = true;
+                }
+                
             }
             if (dogo.Bounds.IntersectsWith(pared7.Bounds))
             {
                 move_d.Enabled = false;
                 move_r.Enabled = true;
             }
-            if (dogo.Bounds.IntersectsWith(pared8.Bounds))
+           /* if (dogo.Bounds.IntersectsWith(pared8.Bounds))
             {
                 move_r.Enabled = false;
                 move_up.Enabled = true;
-            }
+            }*/
             if (dogo.Bounds.IntersectsWith(pared9.Bounds))
             {
-                dogo.Left -= dogo.Width;
-                dogo.Top += dogo.Width;
+                if (dogo.Location.X == 600)
+                {
+                    move_r.Enabled = false;
+                    move_d.Enabled = true;
+                }
+                else
+                {
+                    move_l.Enabled = false;
+                    move_d.Enabled = true;
+                }
             }
             if (dogo.Bounds.IntersectsWith(pared10.Bounds))
             {
-                dogo.Left -= dogo.Width;
-                dogo.Top += dogo.Width;
+                if (dogo.Location.X == 600)
+                {
+                    move_r.Enabled = false;
+                    move_l.Enabled = true;
+                }
+                else
+                {
+                    move_l.Enabled = false;
+                    move_r.Enabled = true;
+                }
             }
             if (dogo.Bounds.IntersectsWith(pared11.Bounds))
             {
-                dogo.Left -= dogo.Width;
-                dogo.Top += dogo.Width; 
+                if (dogo.Location.X == 680)
+                {
+                    move_r.Enabled = false;
+                    move_l.Enabled = true;
+                }
+                else
+                {
+                    move_l.Enabled = false;
+                    move_r.Enabled = true;
+                }
             }
             if(dogo.Bounds.IntersectsWith(pictureBox2.Bounds))
             {
@@ -87,7 +120,7 @@ namespace Lenguajes_II
             }
             if (dogo.Bounds.IntersectsWith(pictureBox4.Bounds))
             {
-                move_p.Enabled = false;
+                move_up.Enabled = false;
                 move_d.Enabled = true;
                 
             }

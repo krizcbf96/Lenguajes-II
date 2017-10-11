@@ -48,7 +48,6 @@
             this.pared11 = new System.Windows.Forms.PictureBox();
             this.pared10 = new System.Windows.Forms.PictureBox();
             this.pared9 = new System.Windows.Forms.PictureBox();
-            this.pared8 = new System.Windows.Forms.PictureBox();
             this.pared7 = new System.Windows.Forms.PictureBox();
             this.pared6 = new System.Windows.Forms.PictureBox();
             this.pared5 = new System.Windows.Forms.PictureBox();
@@ -70,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pared11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pared8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared5)).BeginInit();
@@ -164,7 +162,7 @@
             this.ghost_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ghost_1.Image = global::Lenguajes_II.Properties.Resources.tumblr_o21bscL3FW1uf5cjoo1_400;
             this.ghost_1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ghost_1.Location = new System.Drawing.Point(386, 489);
+            this.ghost_1.Location = new System.Drawing.Point(385, 489);
             this.ghost_1.Name = "ghost_1";
             this.ghost_1.Size = new System.Drawing.Size(62, 73);
             this.ghost_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -219,7 +217,7 @@
             this.ghost_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ghost_2.Image = global::Lenguajes_II.Properties.Resources.tumblr_o21bscL3FW1uf5cjoo1_400;
             this.ghost_2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ghost_2.Location = new System.Drawing.Point(629, 2);
+            this.ghost_2.Location = new System.Drawing.Point(642, 2);
             this.ghost_2.Name = "ghost_2";
             this.ghost_2.Size = new System.Drawing.Size(55, 57);
             this.ghost_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,9 +231,9 @@
             this.dogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dogo.Image = global::Lenguajes_II.Properties.Resources._15c144e8dc552a100b3292d268854499;
             this.dogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dogo.Location = new System.Drawing.Point(93, 41);
+            this.dogo.Location = new System.Drawing.Point(65, 71);
             this.dogo.Name = "dogo";
-            this.dogo.Size = new System.Drawing.Size(62, 59);
+            this.dogo.Size = new System.Drawing.Size(48, 54);
             this.dogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dogo.TabIndex = 45;
             this.dogo.TabStop = false;
@@ -246,9 +244,9 @@
             this.pared11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pared11.BackgroundImage")));
             this.pared11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pared11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pared11.Location = new System.Drawing.Point(722, 388);
+            this.pared11.Location = new System.Drawing.Point(722, 406);
             this.pared11.Name = "pared11";
-            this.pared11.Size = new System.Drawing.Size(21, 174);
+            this.pared11.Size = new System.Drawing.Size(21, 156);
             this.pared11.TabIndex = 44;
             this.pared11.TabStop = false;
             // 
@@ -258,9 +256,9 @@
             this.pared10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pared10.BackgroundImage")));
             this.pared10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pared10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pared10.Location = new System.Drawing.Point(530, 244);
+            this.pared10.Location = new System.Drawing.Point(529, 244);
             this.pared10.Name = "pared10";
-            this.pared10.Size = new System.Drawing.Size(378, 21);
+            this.pared10.Size = new System.Drawing.Size(214, 21);
             this.pared10.TabIndex = 43;
             this.pared10.TabStop = false;
             // 
@@ -274,21 +272,9 @@
             this.pared9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pared9.Location = new System.Drawing.Point(642, 2);
             this.pared9.Name = "pared9";
-            this.pared9.Size = new System.Drawing.Size(21, 251);
+            this.pared9.Size = new System.Drawing.Size(21, 241);
             this.pared9.TabIndex = 42;
             this.pared9.TabStop = false;
-            // 
-            // pared8
-            // 
-            this.pared8.BackColor = System.Drawing.Color.Transparent;
-            this.pared8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pared8.BackgroundImage")));
-            this.pared8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pared8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pared8.Location = new System.Drawing.Point(400, 311);
-            this.pared8.Name = "pared8";
-            this.pared8.Size = new System.Drawing.Size(21, 251);
-            this.pared8.TabIndex = 41;
-            this.pared8.TabStop = false;
             // 
             // pared7
             // 
@@ -296,7 +282,7 @@
             this.pared7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pared7.BackgroundImage")));
             this.pared7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pared7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pared7.Location = new System.Drawing.Point(130, 394);
+            this.pared7.Location = new System.Drawing.Point(123, 406);
             this.pared7.Name = "pared7";
             this.pared7.Size = new System.Drawing.Size(274, 21);
             this.pared7.TabIndex = 40;
@@ -310,7 +296,7 @@
             this.pared6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pared6.Location = new System.Drawing.Point(244, 2);
             this.pared6.Name = "pared6";
-            this.pared6.Size = new System.Drawing.Size(21, 251);
+            this.pared6.Size = new System.Drawing.Size(21, 149);
             this.pared6.TabIndex = 39;
             this.pared6.TabStop = false;
             // 
@@ -423,7 +409,6 @@
             this.Controls.Add(this.pared11);
             this.Controls.Add(this.pared10);
             this.Controls.Add(this.pared9);
-            this.Controls.Add(this.pared8);
             this.Controls.Add(this.pared7);
             this.Controls.Add(this.pared6);
             this.Controls.Add(this.pared5);
@@ -442,7 +427,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pared11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pared8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pared5)).EndInit();
@@ -474,7 +458,6 @@
         private System.Windows.Forms.PictureBox pared11;
         private System.Windows.Forms.PictureBox pared10;
         private System.Windows.Forms.PictureBox pared9;
-        private System.Windows.Forms.PictureBox pared8;
         private System.Windows.Forms.PictureBox pared7;
         private System.Windows.Forms.PictureBox pared6;
         private System.Windows.Forms.PictureBox pared5;
