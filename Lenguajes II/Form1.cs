@@ -34,7 +34,7 @@ namespace Lenguajes_II
         //Movimiento Dogo 
         private void Move_dogo()
         {
-            dogo.Location = new Point(dogo.Location.X + 1, dogo.Location.Y);
+            
         }
 
         private void colision()
@@ -42,50 +42,56 @@ namespace Lenguajes_II
             //Point(x,y)
             if (dogo.Bounds.IntersectsWith(pared6.Bounds))
             {
-                dogo.Left -= 9;
-                dogo.Top += 20;
+                move_r.Enabled = false;
+                move_d.Enabled = true;
             }
             if (dogo.Bounds.IntersectsWith(pared7.Bounds))
-                {
-                    dogo.Left -= dogo.Width;
-                    dogo.Top += dogo.Width;
-                }
-                if (dogo.Bounds.IntersectsWith(pared8.Bounds))
-                {
+            {
+                move_d.Enabled = false;
+                move_r.Enabled = true;
+            }
+            if (dogo.Bounds.IntersectsWith(pared8.Bounds))
+            {
+                move_r.Enabled = false;
+                move_up.Enabled = true;
+            }
+            if (dogo.Bounds.IntersectsWith(pared9.Bounds))
+            {
                 dogo.Left -= dogo.Width;
                 dogo.Top += dogo.Width;
             }
-                if (dogo.Bounds.IntersectsWith(pared9.Bounds))
-                {
+            if (dogo.Bounds.IntersectsWith(pared10.Bounds))
+            {
                 dogo.Left -= dogo.Width;
                 dogo.Top += dogo.Width;
             }
-                if (dogo.Bounds.IntersectsWith(pared10.Bounds))
-                {
+            if (dogo.Bounds.IntersectsWith(pared11.Bounds))
+            {
                 dogo.Left -= dogo.Width;
-                dogo.Top += dogo.Width;
+                dogo.Top += dogo.Width; 
             }
-                if (dogo.Bounds.IntersectsWith(pared11.Bounds))
-                {
-                dogo.Left -= dogo.Width;
-                dogo.Top += dogo.Width; dogo.Left -= 20;
-                }
-                if(dogo.Location.Y == 0 && dogo.Location.X == 0){
-                dogo.Left -= dogo.Width;
-                dogo.Top += dogo.Width; dogo.Left -= 20;
+            if(dogo.Bounds.IntersectsWith(pictureBox2.Bounds))
+            {
+                move_d.Enabled = false;
+                move_up.Enabled = true;
             }
-                if (dogo.Bounds.IntersectsWith(ghost_1.Bounds))
-                {
-                    move.Stop();
-                    MessageBox.Show("te has encontrado con un terrible destino");
-                    this.Close();
-                }
-                if (dogo.Bounds.IntersectsWith(ghost_2.Bounds))
-                {
-                    move.Stop();
-                    MessageBox.Show("te has encontrado con un terrible destino");
-                    this.Close();
-                }
+            if (dogo.Bounds.IntersectsWith(pictureBox1.Bounds))
+            {
+                move_l.Enabled = false;
+                move_r.Enabled = true;
+            }
+            if (dogo.Bounds.IntersectsWith(pictureBox3.Bounds))
+            {
+                move_r.Enabled = false;
+                move_l.Enabled = true;
+            }
+            if (dogo.Bounds.IntersectsWith(pictureBox4.Bounds))
+            {
+                move_p.Enabled = false;
+                move_d.Enabled = true;
+                
+            }
+            
         }
 
         //Aparecer, y mover ghosts cada 10 segundos
@@ -101,13 +107,13 @@ namespace Lenguajes_II
             //Colision con dogo
             if (dogo.Bounds.IntersectsWith(ghost_1.Bounds))
             {
-                move.Stop();
+                move_r.Stop();
                 MessageBox.Show("te has encontrado con un terrible destino");
                 this.Close();
             }
             if (dogo.Bounds.IntersectsWith(ghost_2.Bounds))
             {
-                move.Stop();
+                move_r.Stop();
                 MessageBox.Show("te has encontrado con un terrible destino");
                 this.Close();
             }
@@ -116,7 +122,7 @@ namespace Lenguajes_II
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Move_dogo();
+            dogo.Location = new Point(dogo.Location.X + 1, dogo.Location.Y);
             colision();
         }
 
@@ -136,7 +142,7 @@ namespace Lenguajes_II
             else if (time == 0)
             {
                 MessageBox.Show("te has encontrado con un terrible destino");
-                move.Stop();
+                move_r.Stop();
                 this.Close();
             }
 
@@ -196,7 +202,7 @@ namespace Lenguajes_II
             Random juego = new Random();
             if (dogo.Bounds.IntersectsWith(balon.Bounds) || dogo.Bounds.IntersectsWith(pelota.Bounds))
             {
-                move.Stop();
+                move_r.Stop();
                 do
                 {
                     game_time = game_time - 1;
@@ -206,8 +212,8 @@ namespace Lenguajes_II
 
                 if (game_time == -1)
                 {
-                    move.Start();
-                    move.Interval = 2;
+                    move_r.Start();
+                    move_r.Interval = 2;
                     label2.Visible = false;
                     game_time = 30;
                     pelota.Location = new Point(juego.Next(942), juego.Next(488));
@@ -233,17 +239,35 @@ namespace Lenguajes_II
             
             if(sl == 0)
             {
-                move.Stop();
+                move_r.Stop();
                 label5.Visible = true;
                 label5.Text = "Durmiendo: " + sl;
             }
-            move.Interval = (1000);
-            move.Start();
+            move_r.Interval = (1000);
+            move_r.Start();
 
         }
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void move_d_Tick(object sender, EventArgs e)
+        {
+            dogo.Location = new Point(dogo.Location.X, dogo.Location.Y + 1);
+            colision();
+        }
+
+        private void move_up_Tick(object sender, EventArgs e)
+        {
+            dogo.Location = new Point(dogo.Location.X, dogo.Location.Y - 1);
+            colision();
+        }
+
+        private void move_l_Tick(object sender, EventArgs e)
+        {
+            dogo.Location = new Point(dogo.Location.X - 1, dogo.Location.Y);
+            colision();
         }
     }
 }
